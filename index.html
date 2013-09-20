@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="yarneeApp" id="yarneeApp" xmlns:ng="http://angularjs.org">
+<head>
+  <meta charset="utf-8">
+  <title ng-bind="html_title">Yarnee</title>
+
+  <base href="/app/"> <!-- HTML5 Hash Mode -->
+  <meta name="fragment" content="!"> <!-- See https://developers.google.com/webmasters/ajax-crawling/docs/specification -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  <script src="lib/jquery/jquery.js"></script>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-route.js"></script>
+  <script src="lib/angular-ui/ui-bootstrap.js"></script>
+  <script src="lib/js-uri/URI.js"></script>
+  <script src="lib/s3upload/s3upload.js"></script>
+  <script src="js/yarnee-setup.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+  <link href="css/bootstrap.css"            rel="stylesheet"/>
+  <!-- <style type="text/css">
+    body {
+        padding-top: 95px;
+    }
+  </style> -->
+  <link href="css/bootstrap-responsive.css" rel="stylesheet"/>
+  <link href="css/yarnee.css"               rel="stylesheet"/>
+  <link href="css/miniyarn216.css"          rel="stylesheet"/>
+  <link href="css/miniyarn416.css"          rel="stylesheet"/>
+  
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/ico/Icon-72@2x.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/ico/Icon@2x.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72"   href="img/ico/Icon-72.png">
+  <link rel="apple-touch-icon-precomposed" sizes="57x57"   href="img/ico/Icon.png">
+  
+  
+<!--    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">-->
+<!--    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">-->
+<!--    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">-->
+<!--    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">-->
+<!--    -->
+<!--    <link href="apple-touch-startup-image-320x460.png" media="(device-width: 320px)" rel="apple-touch-startup-image">-->
+<!--    <link href="apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">-->
+<!--    <link href="apple-touch-startup-image-768x1004.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" rel="apple-touch-startup-image" />-->
+<!--    <link href="apple-touch-startup-image-1024x748.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" rel="apple-touch-startup-image" />-->
+<!--    <link href="apple-touch-startup-image-1536x2008.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />-->
+<!--    <link href="apple-touch-startup-image-2048x1496.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />-->
+
+
+  <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+    <noscript style="padding:20px; text-align: center; display: block;"><a href="http://www.enable-javascript.com/" rel="nofollow" target="_blank">Please enable JavaScript.</a></noscript>
+    <!-- Start of Navbar -->
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="dropdown-toggle navbar-dropdown">
+
+        </div>
+        <div class="dropdown-menu">
+            <div class="dropdown-menu-footer">
+                <div class="dropdown-menu-footer-row">
+                    <a>Home</a> -
+                    <a>About Us</a> -
+                    <a>Jobs</a> -
+                    <a>Blog</a>
+                </div>
+                <div class="dropdown-menu-footer-row">
+                    <a>Press</a> -
+                    <a>Contact</a>
+                </div>
+
+
+            </div>
+        </div>
+      <a class="brand" href="./">&nbsp;</a>
+      <!--<div class="nav-collapse collapse">-->
+        <!--<ul class="nav">-->
+          <!--<li><a href="#">About</a></li>-->
+          <!--<li><a href="#about">Logout</a></li>-->
+          <!--<li><a href="#contact">Blog</a></li>-->
+          <!--<li><a href="#search"><img src="img/search.png"></img></a></li>-->
+        <!--</ul>-->
+      <!--</div>-->
+         <span ng-show="warning" class="label label-important navbar-warning"><a style="color:red" ng-bind="warning" href="/"></a></span>
+      </div>
+    </div>
+    <!-- End of Navbar -->
+
+    
+	<div class="container">
+	   <div ng-view></div>
+	</div>
+    
+    <br />
+    <br />
+    <br />
+    <br />
+        
+</body>
+</html>

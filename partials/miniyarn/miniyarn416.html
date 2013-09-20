@@ -1,0 +1,20 @@
+
+<div class="miniyarn416-notice" style="color: gray; border: 1px solid; border-radius: 3px; padding: 3px; width: 400px; text-align: center; margin-bottom: 3px;">
+    Include the miniyarn416.css!
+</div>
+
+<div class="miniyarn416wrapper">
+    <div class="miniyarn416" ng-click="openyarn('{{yarn.userid}}', '{{yarn.yarnid}}')">
+        <div class="mediawrapper">
+            <div class="media">
+                <img ng-src="{{yarn.image}}" />
+            </div>
+        </div>
+        <div class="media_description_spacer"></div>
+        <div class="descriptions">
+            <div class="title text">{{yarn.title}}</div>
+            <div class="title_authors_spacer">by</div>
+            <div class="authors text">{{yarn.authors}}</div>
+        </div>
+    </div>
+</div>

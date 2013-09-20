@@ -1,0 +1,101 @@
+
+<div class="yarn edit" ng-switch on="pagegroup">
+
+  <div class="page-wrapper cover edit" ng-switch-default>
+    <div class="media-wrapper edit" ng-click="selectmedia($event)">
+      <div class="model-media-wrapper cover" ng-hide="imageexists">
+        <input id="upload_input" type="file" onchange="angular.element('[ng-view]').children().scope().setFile(this)"/>
+      </div>
+      <div class="media edit">
+        <div ng-show="imageexists" ng-include src="$parent.templateIdentifier"></div>
+      </div>
+    </div>
+    
+    
+    <div class="covertitle edit commontext"  ng-hide="$parent.covertitleEditor" ng-click="editCovertitleStart(element)">
+      {{$parent.page.meta.title || 'Title'}}
+    </div>
+    <div class="covertitle edit-form commontext" ng-show="$parent.covertitleEditor">
+      <input class="model-covertitle" ng-model="$parent.page.meta.title">
+      <a href="javascript:void(0);" ng-click="editCovertitleEnd()">Save</a>
+    </div>
+    
+    <div class="coverbar"></div>
+    
+    <div class="author commontext">
+      {{$parent.userid || 'Author'}}
+    </div>
+    <div class="author edit-form commontext" ng-show="$parent.authorEditor">
+      <input class="model-author" ng-model="$parent.page.meta.author">
+      <a href="javascript:void(0);" ng-click="editAuthorEnd()">Save</a>
+    </div>
+    
+  </div>
+
+  <div class="page-wrapper page edit" ng-switch-when="page">
+    <div class="media-wrapper edit" ng-click="selectmedia($event)">
+      <div class="model-media-wrapper page" ng-hide="imageexists">
+        <input id="upload_input" type="file" onchange="angular.element('[ng-view]').children().scope().setFile(this)"/>
+        <div class="addurlressource" ng-click="selectressource($event)"></div>
+      </div>
+      <div class="media edit">
+        <div ng-show="imageexists" ng-include src="$parent.templateIdentifier"></div>
+      </div>
+    </div>
+    <div class="title edit commontext"  ng-class="{'icons': !$parent.page.meta.title.length}" ng-hide="$parent.textEditor" ng-click="editTitleStart(element)">
+      {{$parent.page.meta.title}}
+    </div>
+    <div class="title edit-form commontext" ng-show="$parent.textEditor">
+      <input class="model-title" ng-model="$parent.page.meta.title">
+      <a href="javascript:void(0);" ng-click="editTitleEnd()">Save</a>
+    </div>
+    <div class="author edit"></div>
+  </div>
+  
+  
+  <div class="page-wrapper page edit" ng-switch-when="finish">
+    <div class="finish-wrapper edit">
+        {{$parent.notice}}
+        <div ng-show="!$parent.notice">
+        <h2>Congratulations!</h2>
+            <strong>Your Yarn has been saved</strong> and is viewable on the internet at:<br/><a href="{{$parent.urlToShare}}">{{$parent.urlToShare}}</a>.
+            <br />
+            <br />
+            <br />
+            <br />
+            Copy to share:<br />
+            <input class="urltoshare" type="text" value="{{$parent.urlToShare}}" />
+            <br />
+            <br />
+            Where to go from here:<br />
+            <ul>
+                <li><a href="{{$parent.urlToEdit}}">Edit this Yarn</a></li>
+                <li><a href="#/yarn/create">Create an other new Yarn</a></li>
+                <li>Go back to the <a href="#/">Homepage</a></li>
+            </ul>
+        </div>
+    </div>
+  </div>
+
+
+  <div class="edit navigation-tiles">
+    <div class="title-page tile" ng-click="selectPage(0)" >Title Page</div>
+
+    <!-- TODO show only the page tiles -->
+    <div class="pages">
+      <div ng-repeat="page in model.pages" class="page tile page-{{($index)}}" ng-click="selectPage($index)">
+        Page {{($index)}}
+      </div>
+    </div>
+    
+    <div class="add-page tile" ng-click="addPage()">Add Page</div>
+    <div class="finish tile" ng-click="finishYarn()">Finish</div>
+  </div>
+</div>
+
+
+<div class="debug" style="position:fixed; color:beige; font-family:monospace; width:150px; right:0; font-size:80%; top:78px;">
+    Current Page: {{currentpage}}<br />
+    Page Type: {{pagegroup}}<br />
+</div>
+

@@ -1,0 +1,70 @@
+/* Styles for the mini yarns, to seperate from the other styles */
+
+.miniyarn216-notice {
+    display: none;
+}
+
+.miniyarn216list {
+    margin-left: -5px;
+    padding-top: 5px;
+}
+
+.miniyarn216wrapper {
+    padding-top: 5px;
+    padding-right: 10px;
+    float: left;
+    overflow: hidden;
+}
+
+.miniyarn216 {
+    background-image: url("../img/miniyarn/cover205x201.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 206px;
+    height: 201px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+}
+
+.miniyarn216wrapper, .miniyarn216wrapper * div {
+    /*border: 1px solid black; /* debug */ 
+}
+
+.miniyarn216wrapper * div {
+    text-align: center;
+}
+
+.miniyarn216wrapper .mediawrapper {
+    height: 133px;
+    margin-top: 13px;
+}
+
+.miniyarn216 .media img {
+    border: 2px solid black;
+    border-radius: 3px;
+    max-height: 122px;
+    max-width: 156px;
+}
+
+.miniyarn216 .title_authors_spacer {
+    font-size:50%;
+    line-height: normal;
+}
+
+.miniyarn216 .descriptions * {
+    color: #484848;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.miniyarn216 * .text {
+	font-size: 14px;
+    line-height: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 176px;
+}
+

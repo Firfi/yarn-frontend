@@ -1,0 +1,34 @@
+
+<h2>My Yarns</h2>
+<div>
+    <div class="miniyarn416list">
+        <div ng-repeat="yarn in yarns">
+            <ng-include src="'partials/miniyarn/miniyarn416.html'"></ng-include>
+        </div>
+    </div>
+    
+    <!--  br style="clear:both" /-->
+    
+    <div class="miniyarn216list">
+        <div ng-repeat="yarn in yarns">
+            <ng-include src="'partials/miniyarn/miniyarn216.html'"></ng-include>
+        </div>
+    </div>
+</div>
+
+<br style="clear:both"/>
+<br />
+
+<h2>Edit my Yarns</h2>
+<div>
+    <div ng-repeat="yarn in yarns">
+        <a ng-href="yarn/{{yarn.userid}}/{{yarn.yarnid}}/edit">{{yarn.title}} (edit)</a>
+    </div>
+</div>
+
+<br style="clear:both"/>
+
+<h2>Create a Yarn</h2>
+<div>
+    <a href="yarn/create">Create a new Yarn</a>
+</div>

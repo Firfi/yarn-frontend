@@ -1,0 +1,419 @@
+/* Styles for the bootstrap integration */
+body {
+    /* padding-top: 95px; was moved to index.html */
+    /* 95px to make the container go all the way to the bottom of the topbar */
+    overflow-y: scroll;
+    background-color: #f8f7f7;
+}
+
+.navbar {
+    box-shadow: 0 0 50px grey;
+}
+
+.navbar .brand {
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    width: 256px;
+    outline: none;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    font-size: 20px;
+    display: block;
+    padding: 25px 20px 25px;
+}
+
+.navbar-inner {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar-warning {
+    float: right;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+}
+
+.navbar-dropdown {
+    position: absolute;
+    margin-left: 5px;
+    background-image: url(../img/menu-button.png);
+    background-repeat: no-repeat;
+    left: 0px;
+    height: 62px;
+    width: 72px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.open .navbar-dropdown {
+    background-image: url(../img/menu-button-clicked.png);
+}
+
+.dropdown-menu {
+    min-width: 250px;
+    height: 400px;
+    left: 13px;
+    border-radius: 13px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    top: 107%;
+}
+
+.dropdown-menu::before {
+    position: absolute;
+    top: -23px;
+    left: 9px;
+    display: inline-block;
+    border-right: 23px solid transparent;
+    border-bottom: 23px solid #CCC;
+    border-left: 23px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    content: '';
+}
+.dropdown-menu::after {
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    display: inline-block;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid white;
+    border-left: 20px solid transparent;
+    content: '';
+}
+
+.dropdown-menu-footer {
+    position: absolute;
+    bottom: 0px;
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+    background-color: #efeded;
+    z-index: 33;
+    font-weight: 500;
+    width: 100%;
+    border-radius: 0 0 13px 13px;
+    -webkit-border-radius: 0 0 13px 13px;
+    -moz-border-radius: 130 0 13px 13px;
+}
+
+.dropdown-menu-footer a {
+    color: #747474;
+}
+
+/* Homepage */
+.home-link-list {
+    display: block;
+}
+
+/* Read Yarns */
+.yarn div { /* for debugging */ /*border: 1px solid gray;*/
+    
+}
+
+.yarn {
+    clear: both;
+    margin-top: 20px;
+    color: #494848;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.yarn .page-wrapper {
+    float: left;
+    height: 779px;
+    width: 96%;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 0 50px grey;
+}
+
+.yarn .sharing-wrapper {
+    height: 779px;
+    position: relative;
+    float: left;
+    margin-left: 25px;
+}
+
+/* the Cover page */
+.yarn .cover {
+    /*display: none;*/
+}
+
+.yarn .media-wrapper, .yarn .finish-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 55px;
+    text-align: center;
+    vertical-align: middle;
+    width: 527px;
+    height: 435px;
+
+}
+
+
+.yarn .media-wrapper.edit {
+    cursor: pointer;
+}
+
+.yarn .media img {
+    max-height: 500px;
+    border: 5px solid black;
+    border-radius: 8px; 
+    max-width: 517px; /* 10 px of borders */
+}
+
+.yarn .media-wrapper .type-text div {
+    font-style: italic;
+    font-size: 400%;
+    line-height: 58px;
+}
+
+.yarn .media-wrapper .type-image img {
+    width: 517px; /* 10 px of borders */
+}
+
+.yarn .media-wrapper .type-youtube iframe,.yarn .media-wrapper .type-movie iframe {
+    width: 527px;
+    height: 527px;
+}
+
+.yarn-paperback {
+    width: 25px;
+    background-color: #222222;
+    position: relative;
+    height: 100%;
+    float: left;
+}
+
+.description.viewyarn  {
+    color: black;
+    text-align: center;
+}
+
+.yarn .commontext {
+    line-height: 60px;
+    font-size: 60px;
+    text-align: center;
+    overflow: hidden;    
+}
+
+.yarn .title {
+    
+}
+
+.yarn .covertitle, .yarn .author {
+    margin-top: 0px;
+    color: #E8051F;
+    font-weight: bold;
+}
+
+.yarn .covertitle {
+    margin-bottom: 11px;  
+    cursor: pointer; 
+}
+
+.yarn .author {
+    margin-top: 11px;
+    font-weight: 100 !important;
+}
+
+.viewyarn .author, .viewyarn .title {
+    color: #484848;
+    margin-top: 0px;
+    font-weight: normal;
+}
+
+.title_author_divider {
+    text-align: center;
+    line-height: 30px;
+}
+
+
+.yarn .coverbar {
+    background-color: #E8051F;
+    height: 5px;
+    margin-left: 381px;
+    text-align: center;
+    width: 100px;
+}
+
+
+.yarn .sharing {
+    position: absolute;
+    float: left;
+    bottom: 10px;
+}
+
+.yarn .controls {
+    float: left;
+    width: 90%;
+    margin-left: 3%;
+    margin-top: 20px;
+}
+
+.yarn .next, .prev,.play, .follow,.heart {
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 60px;
+    padding-bottom: 5px;
+}
+
+.yarn .play {
+    width: 100px;
+}
+
+.yarn .play {
+    float: left;
+}
+
+.yarn .prev, .next {
+    float: right;
+}
+
+.yarn .next {
+    background-image: url(../img/arrow-right.png);
+    cursor: pointer;
+}
+
+.yarn .prev {
+    background-image: url(../img/arrow-left.png);
+    cursor: pointer;
+}
+
+.yarn .play {
+    background-image: url(../img/restart.png);
+}
+
+.yarn .follow {
+    background-image: url(../img/twitter.png);
+    cursor: pointer;
+}
+
+.yarn .heart {
+    background-image: url(../img/facebook.png);
+    cursor: pointer;
+}
+
+
+
+/* Create Yarn */
+.model-media-wrapper {
+    background-repeat: no-repeat;
+    height: 527px;
+}
+
+.model-media-wrapper.page {
+    background-image: url("../img/yarn-add-media.png");
+}
+
+.model-media-wrapper.cover {
+    background-image: url("../img/yarn-cover-add-media.png");
+}
+
+.model-media-wrapper input {
+    visibility: hidden;
+}
+
+.yarn.edit .title {
+    height: 111px;
+    margin: 0 0 0 178px;
+    padding: 0;
+    position: relative;
+    width: 527px;
+    cursor: pointer; /* still editable! */
+}
+
+.yarn.edit .title.edit.icons {
+    cursor: pointer;
+}
+
+.yarn.edit .icons {
+    background-image: url("../img/yarn-text-and-audio.png");
+    background-repeat: no-repeat;
+}
+
+.yarn.edit .title.edit-form {
+    padding-top: 37px;
+}
+
+.yarn.edit .title input {
+    text-align: center;
+}
+
+.yarn.edit .title input, .yarn.edit .covertitle input, .yarn.edit .author input {
+    height: 50px;
+    font-size: inherit;
+    width: 400px;
+}
+
+
+.yarn.edit .covertitle input, .yarn.edit .author input {
+    font-weight: bold;
+    text-align: center;
+    color: #9D0011;
+}
+
+.controls.edit {
+    display: none;
+}
+
+.navigation-tiles {
+    margin-left: 153px;
+    width: 650px;
+}
+
+.navigation-tiles .tile {
+    border-color: #E8051F;
+    border-style: solid;
+    border-width: 3px;
+    color: #E8051F;
+    float: left;
+    font-size: 193%;
+    font-weight: bold;
+    height: 89px;
+    line-height: normal;
+    margin: 6px;
+    position: relative;
+    text-align: center;
+    width: 103px;
+    cursor: pointer;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    text-shadow: 0 0 4px white;
+    opacity: 0.5;
+}
+
+.navigation-tiles .tile:hover, .navigation-tiles .tile.active  {
+    opacity: 1;
+}
+
+.navigation-tiles .tile.active {
+    border-width: 6px;
+    margin: 3px;
+}
+
+.navigation-tiles .tile.page-0 {
+    display: none;
+}
+
+.addurlressource {
+    /* border: 1px solid gray; /* debugging */
+    height: 445px;
+    margin-left: 339px;
+}
+
+.urltoshare {
+    width: 420px;
+}
+
+.yarn .finish-wrapper {
+    text-align: left;
+    margin-top: 253px;
+}

@@ -1,0 +1,72 @@
+/* Styles for the mini yarns, to seperate from the other styles */
+
+.miniyarn416-notice {
+    display: none;
+}
+
+.miniyarn416list {
+    margin-left: -5px;
+    clear: both;
+}
+
+.miniyarn416wrapper {
+    padding-top: 10px;
+    padding-right: 10px;
+    float: left;
+    overflow: hidden;
+}
+
+.miniyarn416 {
+    background-image: url("../img/miniyarn/cover418x408.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 418px;
+    height: 408px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+}
+
+.miniyarn416wrapper, .miniyarn416wrapper * div {
+    /*border: 1px solid black; /* debug */ 
+}
+
+.miniyarn416wrapper * div {
+    text-align: center;
+}
+
+.miniyarn416wrapper .mediawrapper {
+    height: 273px;
+    margin-top: 21px;
+}
+
+.miniyarn416 .media img {
+    border: 2px solid black;
+    border-radius: 3px;
+    max-height: 265px;
+    max-width: 343px;
+}
+
+.miniyarn416 .title_authors_spacer {
+    font-size: 17px;
+    line-height: normal;
+    padding-top: 5px;
+}
+
+.miniyarn416 .descriptions * {
+    color: #484848;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.miniyarn416 * .text {    
+    font-size: 29px;
+    height: 29px; /* for the overflow hidden! */
+    line-height: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 357px;
+}
+
