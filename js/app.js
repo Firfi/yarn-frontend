@@ -16,8 +16,9 @@ angular.module('yarneeApp', ['yarneeApp.filters', 'yarneeApp.services', 'yarneeA
         //               /app/yarn/simon/qhbfh9/view
         $routeProvider.when('/yarn/:userid/:yarnid/view*pagenumber',    {templateUrl: 'partials/view_yarn.html',            controller: 'view-yarnCtrl'});
         $routeProvider.when('/yarn/:userid/:yarnid/view/:pagenumber*',  {templateUrl: 'partials/view_yarn.html',            controller: 'view-yarnCtrl'});
+        $routeProvider.when('/yarn/:userid/:yarnid/view/',              {templateUrl: 'partials/view_yarn.html',            controller: 'view-yarnCtrl'});
         $routeProvider.when('/yarn/create*newpage',                     {templateUrl: 'partials/create_and_edit_yarn.html', controller: 'create-yarnCtrl'}); // *newpage is only there to avoid errors
-        $routeProvider.when('/yarn/create',                   {templateUrl: 'partials/create_and_edit_yarn.html', controller: 'create-yarnCtrl'}); // *newpage is only there to avoid errors
+        $routeProvider.when('/yarn/create/',                            {templateUrl: 'partials/create_and_edit_yarn.html', controller: 'create-yarnCtrl'}); // *newpage is only there to avoid errors
         $routeProvider.when('/yarn/create/:newpage*',                   {templateUrl: 'partials/create_and_edit_yarn.html', controller: 'create-yarnCtrl'}); // *newpage is only there to avoid errors
         $routeProvider.when('/yarn/:userid/:yarnid/edit*newpage',       {templateUrl: 'partials/create_and_edit_yarn.html', controller: 'create-yarnCtrl'});
         $routeProvider.when('/my/yarns',                                {templateUrl: 'partials/my_yarns.html',             controller: 'my-yarnsCtrl'});
