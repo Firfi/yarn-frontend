@@ -237,7 +237,7 @@ body {
 .yarn .coverbar {
     background-color: #E8051F;
     height: 5px;
-    margin-left: 381px;
+    margin-left: 305px;
     text-align: center;
     width: 100px;
 }
@@ -346,7 +346,7 @@ body {
 }
 
 .yarn.edit .title input, .yarn.edit .covertitle input, .yarn.edit .author input {
-    height: 50px;
+    height: 75px;
     font-size: inherit;
     width: 400px;
 }
@@ -356,6 +356,10 @@ body {
     font-weight: bold;
     text-align: center;
     color: #9D0011;
+}
+
+.covertitle-edit-texts {
+    margin-top: 30px;
 }
 
 .controls.edit {

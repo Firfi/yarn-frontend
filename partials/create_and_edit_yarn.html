@@ -11,24 +11,26 @@
       </div>
     </div>
     
-    
-    <div class="covertitle edit commontext"  ng-hide="$parent.covertitleEditor" ng-click="editCovertitleStart(element)">
-      {{$parent.page.meta.title || 'Title'}}
+    <div class="covertitle-edit-texts">
+        <div class="covertitle edit commontext"  ng-hide="$parent.covertitleEditor" ng-click="editCovertitleStart(element)">
+            {{$parent.page.meta.title || 'Title'}}
+        </div>
+        <div class="covertitle edit-form commontext" ng-show="$parent.covertitleEditor">
+            <input class="model-covertitle" ng-model="$parent.page.meta.title">
+            <a href="javascript:void(0);" ng-click="editCovertitleEnd()">Save</a>
+        </div>
+
+        <div class="coverbar"></div>
+
+        <div class="author commontext">
+            {{$parent.userid || 'Author'}}
+        </div>
+        <div class="author edit-form commontext" ng-show="$parent.authorEditor">
+            <input class="model-author" ng-model="$parent.page.meta.author">
+            <a href="javascript:void(0);" ng-click="editAuthorEnd()">Save</a>
+        </div>
     </div>
-    <div class="covertitle edit-form commontext" ng-show="$parent.covertitleEditor">
-      <input class="model-covertitle" ng-model="$parent.page.meta.title">
-      <a href="javascript:void(0);" ng-click="editCovertitleEnd()">Save</a>
-    </div>
-    
-    <div class="coverbar"></div>
-    
-    <div class="author commontext">
-      {{$parent.userid || 'Author'}}
-    </div>
-    <div class="author edit-form commontext" ng-show="$parent.authorEditor">
-      <input class="model-author" ng-model="$parent.page.meta.author">
-      <a href="javascript:void(0);" ng-click="editAuthorEnd()">Save</a>
-    </div>
+
     
   </div>
 

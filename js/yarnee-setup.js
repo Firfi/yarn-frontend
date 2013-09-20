@@ -1,9 +1,8 @@
 'use strict';
 
-
 // Prevent console.log errors
 if(typeof(console) === 'undefined') {
-	var console = {}
+	var console = {};
 	console.log = console.error = console.info = console.debug = console.warn = console.trace = console.dir = console.dirxml = console.group = console.groupEnd = console.time = console.timeEnd = console.assert = console.profile = function() {};
 }
 
@@ -33,8 +32,8 @@ function parseMedia(data) {
 	if (uri.authority) {
     	var ending 	= uri.path.match(/\.([^\/]+)$/);
     	
-    	if (!(ending === null) && ending.length > 0) {
-    		var ending = ending[1];
+    	if (ending !== null && ending.length > 0) {
+    		ending = ending[1];
     	}
     	
     	var noOfDots = (uri.authority.split('.').length - 1);
@@ -56,7 +55,8 @@ function parseMedia(data) {
     			var domainWithoutTLD = uri.authority.split('.')[1]; // Probably a TLD with extra dot like .com.uk
     		break; 
     	}
-    	
+
+      // TODO change to array
     	switch (ending) {
     		case 'jpg':
     		case 'jpeg':
@@ -64,7 +64,7 @@ function parseMedia(data) {
     		case 'bmp':
     		case 'png':
     		case 'tif':
-            case 'tiff':
+        case 'tiff':
     			var type = 'image';
     		break;
     		
@@ -222,6 +222,7 @@ function parseMedia(data) {
 
 
 // http://stackoverflow.com/a/5639455/22470
+// TODO check about can we switch to http://docs.angularjs.org/api/ngCookies.$cookies
 (function(){
     var cookies;
 
@@ -252,7 +253,7 @@ function parseMedia(data) {
 })();
 
 
-// Make an string URL save and usefull for sharing
+// Make an string URL save and useful for sharing
 // https://gist.github.com/bentruyman/1211400
 String.prototype.slug = function () {
     return this.toLowerCase().replace(/-+/g, '').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/--/g, '-').replace(/-$/g, '');

@@ -5,12 +5,6 @@
 
 var module = angular.module('yarneeApp.directives', []);
 //
-//module.directive('appVersion', ['version', function(version) {
-//    return function(scope, elm, attrs) {
-//      elm.text(version);
-//    };
-//  }]);
-//
 //
 ////activity items can be of several types .. post-photo, status-change, etc. (think facebook activity stream)
 //module.directive('media', ['$compile', '$http', '$templateCache', function($compile, $http, $templateCache) {
