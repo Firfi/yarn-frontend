@@ -3,11 +3,13 @@ body {
     /* padding-top: 95px; was moved to index.html */
     /* 95px to make the container go all the way to the bottom of the topbar */
     overflow-y: scroll;
-    background-color: #f8f7f7;
+    /* background-color: #f8f7f7; */
+    background-color: #FBFAFA;
 }
 
 .navbar {
     box-shadow: 0 0 50px grey;
+    background-color: white;
 }
 
 .navbar .brand {
