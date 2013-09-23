@@ -125,6 +125,7 @@ body {
     float: left;
     height: 779px;
     width: 96%;
+    position: relative;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     border-radius: 15px;
@@ -133,10 +134,9 @@ body {
 }
 
 .yarn .sharing-wrapper {
-    height: 779px;
-    position: relative;
-    float: left;
-    margin-left: 25px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
 }
 
 /* the Cover page */
@@ -145,12 +145,11 @@ body {
 }
 
 .yarn .media-wrapper, .yarn .finish-wrapper {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 13%;
+    margin-right: 10%;
     margin-top: 55px;
     text-align: center;
     vertical-align: middle;
-    width: 527px;
     height: 435px;
 
 }
@@ -164,7 +163,7 @@ body {
     max-height: 500px;
     border: 5px solid black;
     border-radius: 8px; 
-    max-width: 517px; /* 10 px of borders */
+    /* max-width: 517px; /* 10 px of borders */
 }
 
 .yarn .media-wrapper .type-text div {
@@ -174,7 +173,7 @@ body {
 }
 
 .yarn .media-wrapper .type-image img {
-    width: 517px; /* 10 px of borders */
+    width: 100%;
 }
 
 .yarn .media-wrapper .type-youtube iframe,.yarn .media-wrapper .type-movie iframe {
@@ -183,7 +182,7 @@ body {
 }
 
 .yarn-paperback {
-    width: 25px;
+    width: 4%;
     background-color: #222222;
     position: relative;
     height: 100%;
@@ -245,8 +244,8 @@ body {
 
 .yarn .sharing {
     position: absolute;
-    float: left;
-    bottom: 10px;
+    bottom: 0;
+    margin-left: 10px;
 }
 
 .yarn .controls {
