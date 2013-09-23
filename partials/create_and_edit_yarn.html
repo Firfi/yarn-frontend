@@ -2,12 +2,15 @@
 <div class="yarn edit" ng-switch on="pagegroup">
 
   <div class="page-wrapper cover edit" ng-switch-default>
+    <div class="yarn-paperback"></div>
     <div class="media-wrapper edit" ng-click="selectmedia($event)">
       <div class="model-media-wrapper cover" ng-hide="imageexists">
         <input id="upload_input" type="file" onchange="angular.element('[ng-view]').children().scope().setFile(this)"/>
       </div>
       <div class="media edit">
-        <div ng-show="imageexists" ng-include src="$parent.templateIdentifier"></div>
+        <div ng-show="imageexists" class="type-image">
+            <div ng-include src="$parent.templateIdentifier"></div>
+        </div>
       </div>
     </div>
     
@@ -35,13 +38,16 @@
   </div>
 
   <div class="page-wrapper page edit" ng-switch-when="page">
+    <div class="yarn-paperback"></div>
     <div class="media-wrapper edit" ng-click="selectmedia($event)">
       <div class="model-media-wrapper page" ng-hide="imageexists">
         <input id="upload_input" type="file" onchange="angular.element('[ng-view]').children().scope().setFile(this)"/>
         <div class="addurlressource" ng-click="selectressource($event)"></div>
       </div>
       <div class="media edit">
-        <div ng-show="imageexists" ng-include src="$parent.templateIdentifier"></div>
+        <div ng-show="imageexists" class="type-image">
+            <div ng-include src="$parent.templateIdentifier"></div>
+        </div>
       </div>
     </div>
     <div class="title edit commontext"  ng-class="{'icons': !$parent.page.meta.title.length}" ng-hide="$parent.textEditor" ng-click="editTitleStart(element)">
@@ -56,6 +62,7 @@
   
   
   <div class="page-wrapper page edit" ng-switch-when="finish">
+    <div class="yarn-paperback"></div>
     <div class="finish-wrapper edit">
         {{$parent.notice}}
         <div ng-show="!$parent.notice">

@@ -238,7 +238,7 @@ body {
 .yarn .coverbar {
     background-color: #E8051F;
     height: 5px;
-    margin-left: 305px;
+    margin-left: 44%;
     text-align: center;
     width: 100px;
 }
@@ -322,7 +322,8 @@ body {
 
 .yarn.edit .title {
     height: 111px;
-    margin: 0 0 0 178px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
     position: relative;
     width: 527px;
@@ -368,8 +369,10 @@ body {
 }
 
 .navigation-tiles {
-    margin-left: 153px;
-    width: 650px;
+    float: left;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .navigation-tiles .tile {
